@@ -28,7 +28,23 @@ namespace SweepstakesProject
 
         public string PickWinner(Random rnd)
         {
-            int winner = rnd.Next(0, contestants);
+            int winningKey = rnd.Next(0, contestants);
+            foreach(KeyValuePair<int, Contestant> contestant in contestantDictionary)
+            {
+                if (contestant.Key==winningKey)
+                {
+                    return contestant.Value.name;
+                }
+            }
+            return null;
+
+        }
+
+        public void PrintContestantInfo(Contestant contestant)
+        {
+            Console.WriteLine("Name: "+contestant.name);
+            Console.WriteLine("Email Address: "+ contestant.emailAddress);
+            Console.WriteLine("Registration Number: "+contestant.registrationNumber);
         }
 
 

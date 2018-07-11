@@ -8,5 +8,6 @@ namespace SweepstakesProject
 {
     class ISweepstakesManager
     {
+        void InsertSweepstakes(SweepStakes sweepStakes);
     }
 }

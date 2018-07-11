@@ -8,11 +8,11 @@ namespace SweepstakesProject
 {
     class Contestant
     {
-        string firstName;
-        string lastName;
-        string emailAddress;
-        string registrationNumber;
-        string name;
+        public string firstName;
+        public string lastName;
+        public string emailAddress;
+        public string registrationNumber;
+        public string name;
 
         public Contestant()
         {
