@@ -30,5 +30,28 @@ namespace SweepstakesProject
             Console.WriteLine("Input a registration number for security purposes.");
             return Console.ReadLine().ToString();
         }
+
+        public static ISweepstakesManager GetMarketingFirmStorageStyle()
+        {
+            Console.WriteLine("Would you like to use a stack or Queue for your sweepstakes");
+            string style = Console.ReadLine().ToLower().Trim();
+            if (style == "queue")
+            {
+                SweepstakesQueueManager myStyle = new SweepstakesQueueManager();
+                return myStyle;
+            }
+            else if (style == "stack")
+            {
+                SweepstakesStackManager myStackStyle = new SweepstakesStackManager();
+                return myStackStyle;
+            }
+            else
+            {
+                Console.WriteLine("please enter stack or queue.");
+                GetMarketingFirmStorageStyle();
+                SweepstakesStackManager myStackStyle = new SweepstakesStackManager();
+                return myStackStyle;
+            }
+        }
     }
 }

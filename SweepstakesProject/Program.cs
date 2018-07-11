@@ -10,7 +10,7 @@ namespace SweepstakesProject
     {
         static void Main(string[] args)
         {
-           
+            MarketingFirm myFirm = new MarketingFirm(UI.GetMarketingFirmStorageStyle());
         }
     }
 }

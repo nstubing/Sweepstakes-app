@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace SweepstakesProject
 {
-    class SweepStakes
+    public class Sweepstakes
     {
         public string name;
         public Dictionary<int, Contestant> contestantDictionary;
-        int contestants = 0;
+        public int contestants = 0;
 
 
-        public SweepStakes(string name)
+        public Sweepstakes(string name)
         {
             Random rnd = new Random();
             this.name = name;
