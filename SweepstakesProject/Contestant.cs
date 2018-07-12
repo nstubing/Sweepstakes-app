@@ -16,11 +16,14 @@ namespace SweepstakesProject
 
         public Contestant()
         {
+            Console.Clear();
+            Console.WriteLine("NEW CONTESTANT:");
             firstName = UI.GetUserFirstName();
             lastName = UI.GetUserLastName();
             //ConcatNames();
             emailAddress = UI.GetUserEmail();
             registrationNumber = UI.GetRegistrationNumber();
+            name = firstName + " " + lastName;
         }
 
         //public void ConcatNames()
